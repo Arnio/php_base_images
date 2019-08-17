@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  app:
+    build: ./
+    image: arnio/ubuntu-fpm7.3:1.0
+    environment:
+      TZ: Europe/Kiev
+    ports:
+      - "8800:80"
+    restart: always

@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  app:
+    build: ./
+    image: arnio/alpine-fpm7.3:1.0
+    environment:
+      TZ: Europe/Kiev
+    ports:
+      - "8888:80"
+    restart: always
